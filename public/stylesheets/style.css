@@ -1,13 +1,13 @@
 .nav-wrapper {
-margin: 2rem 0 4rem 0;
-padding: 0 1rem;
-display: flex;
-justify-content: space-between;
+  margin: 2rem 0 4rem 0;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-button{
-  border:0;
-  background-color:#cfcaca ;
+button {
+  border: 0;
+  background-color: #cfcaca;
   width: 100px;
   height: 30px;
   border-radius: 5px;
@@ -15,18 +15,23 @@ button{
 }
 
 button:hover {
-box-shadow:0 0 0.5rem rgb(41, 41, 39);
+  box-shadow: 0 0 0.5rem rgb(41, 41, 39);
 }
 
 a {
   text-decoration: none;
 }
-.about-btn, .portfolio-btn, .contact-btn {
+.about-btn,
+.portfolio-btn,
+.contact-btn {
   margin-left: 1rem;
 }
 
-.btn-active {
-  background-color:#696969 ;
+/* 由動態路由 增加or減少 class */
+.contact-btn.contact-active,
+.portfolio-btn.portfolio-active,
+.about-btn.about-active, .top-page-btn.index-active {
+  background-color: #696969;
   color: white;
 }
 

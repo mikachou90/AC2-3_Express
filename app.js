@@ -12,20 +12,29 @@ app.use(express.static('public'))
 //設定各個分頁 
 //各分頁帶入一個專屬object並設定此物件值為true，並用handlebars的條件式用法{{#if object}}className{{/if}}，當object回傳true給條件式時，則此className可以顯示
 app.get('/', (req, res) => {
-  res.render('index', {indexIsActive: true})
+  res.render('index')
 })
 
-app.get('/about', (req, res) => {
-    res.render('about', { aboutIsActive: true })
+//動態路由
+app.get('/:page', (req, res) => {
+  let page = req.params.page;
+  // console.log('page:', page)
+
+  res.render(page, { activeClass : `${page}-active` })
 })
 
-app.get('/portfolio', (req, res) => {
-  res.render('portfolio', { portfolioIsActive: true } )
-})
+// ||--------- 靜態路由 -------||
+// app.get('/about', (req, res) => {
+//     res.render('about', { aboutIsActive: true })
+// })
 
-app.get('/contact', (req, res) => {
-  res.render('contact', {contactIsActive: true})
-})
+// app.get('/portfolio', (req, res) => {
+//   res.render('portfolio', { portfolioIsActive: true } )
+// })
+
+// app.get('/contact', (req, res) => {
+//   res.render('contact', {contactIsActive: true})
+// })
 
 app.listen(port, () => {
   console.log(`Good`)

@@ -1,37 +1,44 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <nav class="nav-wrapper">
-        <div class="top-page">
-          <a href="/">
-          <button class="top-page-btn btn {{#if indexIsActive}} btn-active {{/if}}">回到首頁</button>
-          </a>
-        </div>
-        <div class="other-pages">
-          <a href="/about">
-          <button class="about-btn btn {{#if aboutIsActive}} btn-active {{/if}}">About</button>
-          </a>
-          <a href="/portfolio">
-          <button class="portfolio-btn btn {{#if portfolioIsActive}} btn-active {{/if}} ">portfolio</button>
-          </a>
-          <a href="/contact">
-          <button class="contact-btn btn {{#if contactIsActive}} btn-active {{/if}}">Contact</button>
-          </a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <nav class="nav-wrapper">
+          <div class="top-page">
+            <a href="/">
+              <button
+                class="top-page-btn btn"
+              >回到首頁</button>
+            </a>
+          </div>
+          <div class="other-pages">
+            <a href="/about">
+              <button
+                class="about-btn btn {{activeClass}} "
+              >About</button>
+            </a>
+            <a href="/portfolio">
+              <button
+                class="portfolio-btn btn {{activeClass}}"
+              >portfolio</button>
+            </a>
+            <a href="/contact">
+              <button
+                class="contact-btn btn {{activeClass}} "
+              >Contact</button>
+            </a>
+          </div>
+        </nav>
       </nav>
-    </nav>
-  </header>
+    </header>
 
-  {{{body}}}
+    {{{body}}}
 
-</body>
+  </body>
 </html>
